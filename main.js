@@ -296,6 +296,9 @@ function renderTaskList(data) {
       }" draggable="true">${formContent(item)}</form>`;
     })
     .join("");
+  document.querySelector(
+    ".task_counter p"
+  ).textContent = `${filterData.length} task left`;
 }
 function formContent(item) {
   const deadLineDate = new Date(item.fields.deadLine).toLocaleDateString();
