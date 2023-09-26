@@ -41,8 +41,9 @@ task_list.addEventListener("dragover", (e) => {
 //  初始載入頁面拿資料＆渲染＆排序
 (async () => {
   data = await fetchData();
-  renderTaskList(data);
-  changeLocation(data);
+  const filterData = filterDataByURL([...data]);
+  renderTaskList(filterData);
+  changeLocation(filterData);
 })();
 
 //  （共用）添加檔案 listener函式
