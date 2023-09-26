@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+@use "../componments/navigation";
+
+header {
+  background: $light-blue;
+}

@@ -1,0 +1,35 @@
+@use "../abstracts/" as *;
+
+.nav_container {
+  ul {
+    display: flex;
+  }
+  a {
+    position: relative;
+    padding: 24px 0;
+    flex: 1 1 auto;
+    display: block;
+    text-align: center;
+    @include Paragraph;
+    color: $blue;
+    @include breakpoint($sm) {
+      @include Title;
+    }
+    &:hover {
+      color: $white;
+    }
+    &.active {
+      color: $white;
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% * 160 / 220);
+        height: 5px;
+        content: "";
+        background: $blue;
+      }
+    }
+  }
+}

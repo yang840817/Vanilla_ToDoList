@@ -1,0 +1,41 @@
+@use "./color" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+$font-family: "Roboto", sans-serif;
+$Medium: 500;
+$Regular: 400;
+
+@mixin Title {
+  font-family: $font-family;
+  font-size: 24px;
+  font-weight: $Medium;
+}
+@mixin Subtitle {
+  font-family: $font-family;
+  font-size: 20px;
+  font-weight: $Medium;
+}
+@mixin Paragraph {
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: $Regular;
+}
+@mixin Remark {
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: $Regular;
+  color: $gray-400;
+}
+@mixin Placeholder {
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: $Regular;
+  color: $gray-400;
+}
+@mixin Status {
+  font-family: $font-family;
+  font-size: 24px;
+  font-weight: $Regular;
+  font-style: italic;
+  color: $gray-300;
+}
