@@ -40,6 +40,9 @@ task_list.addEventListener("dragover", (e) => {
 
 //  初始載入頁面拿資料＆渲染＆排序
 (async () => {
+  const router = document.URL.replace(/.+\//, "");
+  const routerLink = document.querySelector(`a[href="./${router}"]`);
+  routerLink.classList.add("active");
   data = await fetchData();
   const filterData = filterDataByURL([...data]);
   renderTaskList(filterData);
